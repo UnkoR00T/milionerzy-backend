@@ -2,7 +2,7 @@ import {MessageBody, SubscribeMessage, WebSocketGateway, WebSocketServer} from '
 import {Server, Socket} from 'socket.io';
 import {PrismaService} from "../prisma/prisma.service";
 
-@WebSocketGateway({
+@WebSocketGateway(8081, {
   cors: {
     origin: '*',
   },
