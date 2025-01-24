@@ -5,7 +5,9 @@ import {PrismaService} from "../prisma/prisma.service";
 @WebSocketGateway(8081, {
   cors: {
     origin: '*',
+    methods: ['GET', 'POST'],
   },
+  transports: ['websocket']
 })
 export class GameGateway {
   constructor(private prisma: PrismaService) {}
